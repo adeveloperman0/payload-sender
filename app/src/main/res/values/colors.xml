@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#F0F0F0</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="textPrimary">#1A1A1A</color>
+    <color name="textSecondary">#888888</color>
+    <color name="accent">#0078D4</color>
+    <color name="accentDark">#005A9E</color>
+    <color name="inputBorder">#CCCCCC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="statusSuccess">#2E7D32</color>
+    <color name="statusError">#C62828</color>
+    <color name="statusProgress">#555555</color>
+    <color name="buttonSecondary">#DDDDDD</color>
+    <color name="buttonSecondaryDark">#BBBBBB</color>
+</resources>

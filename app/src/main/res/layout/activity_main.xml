@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_vertical"
+    android:background="@color/background">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NetCat GUI"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/textPrimary"
+        android:layout_marginBottom="4dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="v1.3 · Payload Injector"
+        android:textSize="13sp"
+        android:textColor="@color/textSecondary"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- IP + Puerto -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <EditText
+            android:id="@+id/etIpAddress"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="3"
+            android:hint="Dirección IP"
+            android:inputType="text"
+            android:text="192.168.0.31"
+            android:background="@drawable/input_background"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textSecondary"
+            android:textSize="15sp"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/etPort"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:hint="Puerto"
+            android:inputType="number"
+            android:text="9021"
+            android:background="@drawable/input_background"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textSecondary"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <!-- Ruta payload + botón examinar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:id="@+id/etPayloadPath"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:hint="Ruta del payload"
+            android:inputType="none"
+            android:focusable="false"
+            android:background="@drawable/input_background"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textSecondary"
+            android:textSize="15sp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="middle"
+            android:singleLine="true"/>
+
+        <Button
+            android:id="@+id/btnBrowse"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:text="…"
+            android:textSize="18sp"
+            android:background="@drawable/button_secondary_background"
+            android:textColor="@color/textPrimary"/>
+    </LinearLayout>
+
+    <!-- Botón Inject -->
+    <Button
+        android:id="@+id/btnInject"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Inject Payload"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/button_primary_background"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Progress bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Estado -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idle…"
+        android:textSize="15sp"
+        android:textColor="@color/statusProgress"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="monospace"/>
+
+</LinearLayout>
